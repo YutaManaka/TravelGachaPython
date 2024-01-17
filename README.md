@@ -26,7 +26,9 @@ English follows Japanese.
     - [[デプロイ]PythonAnywhereでWebサイトを簡単に公開する](https://chaldene.net/pythonanywhere-deploy)
     - [Pythonanywhereというものを使ってデプロイしてみる](https://qiita.com/sayyyyyy/items/3d5742f5a4c26a90ad0d)
     - [【Flask, pythonanywhere】10分でwebサイト公開（無料サーバー・広告なし・無料SSL）](https://qiita.com/probabilityhill/items/678f77dc96ccad47c401)
-3. 素材
+3. 実装
+    - [画像の表示](https://qiita.com/dem_kk/items/96117a7275c3267d0fbe)
+4. 素材
     - [地球の画像](https://usagif.com/ja/kaiten-suru-chikyu-no-gif/)
 
 ## About This Application
