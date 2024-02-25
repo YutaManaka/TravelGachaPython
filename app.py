@@ -1,6 +1,6 @@
 import sys
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import random
@@ -59,15 +59,16 @@ class TravelGacha(db.Model):
         return destination.name
 
 # ルーティング
-# indexの表示
+# formの表示
 @app.route("/")
 def index():
-    return render_template('index.html') #htmlファイルの表示
+    return render_template('form.html') #htmlファイルの表示
 
 # レコードの作成
 @app.route("/create", methods=["POST"])
 def insert():
     TravelGacha.createGacha(request.form["name"])
+    return redirect("/")
 
 # レコードの更新
 @app.route("/update/<int:id>", methods=["POST"])
@@ -86,8 +87,13 @@ def getGacha(id):
 
 # 目的地の名前取得
 @app.route("/destination", methods=["GET"])
-def  get_destination():
-    return TravelGacha.getDestination()
+def get_destination():
+    return render_template('destination.html', destination=TravelGacha.getDestination()) #htmlファイルの表示
+
+# 再度ガチャ
+@app.route("/retry")
+def retry():
+    return render_template('form.html') #htmlファイルの表示
 
 if __name__=="__main__":
     app.run()
