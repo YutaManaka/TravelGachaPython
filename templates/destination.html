@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=”ja”>
+<head>
+<meta charset=”UTF-8″>
+</head>
+<body>
+    <title>旅行ガチャ</title>
+
+    <div style="text-align: center">
+        <span><font color="blue" style="align-content: center;"><h2>あなたの行き先は...</h2><font></span>
+        <div style="padding: 48px;">
+            <!-- 画像 -->
+            <img src="images/globe.gif">
+        </div>
+        <span style="font-size: 4.5rem; line-height: 1; align-content: center;">{{destination}}</span>
+        <span style="align-content: center;">です！</span>
+        <div style="padding: 16px;"/>
+        <form>
+            <button
+                formaction="/retry"
+                formmethod="GET"
+                type="submit"
+                style="width: 50%; height: 64px; font-size: xx-large; border-radius: 24px;">
+                もう1回ガチャする！！！
+            </button>
+        </form>
+    </div>
+</body>
+</html>
