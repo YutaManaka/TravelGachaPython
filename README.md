@@ -28,6 +28,8 @@ English follows Japanese.
     - [【Flask, pythonanywhere】10分でwebサイト公開（無料サーバー・広告なし・無料SSL）](https://qiita.com/probabilityhill/items/678f77dc96ccad47c401)
 3. 実装
     - [画像の表示](https://qiita.com/dem_kk/items/96117a7275c3267d0fbe)
+    - [How to Perform Flask-SQLAlchemy Migrations Using Flask-Migrate](https://www.digitalocean.com/community/tutorials/how-to-perform-flask-sqlalchemy-migrations-using-flask-migrate)
+    - [ローカルのmysqlに接続できない](https://teratail.com/questions/83388)
 4. 素材
     - [地球の画像](https://usagif.com/ja/kaiten-suru-chikyu-no-gif/)
 
