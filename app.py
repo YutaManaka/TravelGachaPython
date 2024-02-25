@@ -54,9 +54,12 @@ class TravelGacha(db.Model):
         destinations =  db.session.query(TravelGacha)\
             .filter(TravelGacha.used == 0)\
             .all()
-        destination = random.choice(destinations)
-        TravelGacha.updateGacha(destination.id)
-        return destination.name
+        if len(destinations) > 0:
+            destination = random.choice(destinations)
+            TravelGacha.updateGacha(destination.id)
+            return destination.name
+        else:
+            return ''
 
 # ルーティング
 # formの表示
@@ -88,7 +91,11 @@ def getGacha(id):
 # 目的地の名前取得
 @app.route("/destination", methods=["GET"])
 def get_destination():
-    return render_template('destination.html', destination=TravelGacha.getDestination()) #htmlファイルの表示
+    destination_name = TravelGacha.getDestination()
+    if destination_name == '':
+        return render_template('error.html')
+    else:
+        return render_template('destination.html', destination=destination_name) #htmlファイルの表示
 
 # 再度ガチャ
 @app.route("/retry")
