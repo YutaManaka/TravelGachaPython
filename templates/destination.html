@@ -2,18 +2,31 @@
 <html lang=”ja”>
 <head>
 <meta charset=”UTF-8″>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
 </head>
 <body>
     <title>旅行ガチャ</title>
 
     <div style="text-align: center">
-        <span><font color="blue" style="align-content: center;"><h2>あなたの行き先は...</h2><font></span>
-        <div style="padding: 48px;">
-            <!-- 画像 -->
-            <img src="images/globe.gif">
+        <div style="background-color: #3976A7; height: 64px; line-height: 64px; font-size: 32px; font-weight: bold;color:#FFC007;">
+            Python + Flask
         </div>
-        <span style="font-size: 4.5rem; line-height: 1; align-content: center;">{{destination}}</span>
-        <span style="align-content: center;">です！</span>
+        <div style="font-size: 36px; padding: 36px;">
+            あなたの行き先は...
+        </div>
+        <div style="padding: 36px;">
+            <!-- 画像 -->
+            <img
+                src="images/globe.gif"
+                style="width: 480px;">
+        </div>
+        <span style="font-size: 64px; line-height: 64px; align-content: center;">{{destination}}</span>
+        <span style="font-size: 32px;">です！</span>
         <div style="padding: 16px;"/>
         <form>
             <button
