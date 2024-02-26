@@ -27,6 +27,7 @@ English follows Japanese.
     - [Pythonanywhereというものを使ってデプロイしてみる](https://qiita.com/sayyyyyy/items/3d5742f5a4c26a90ad0d)
     - [【Flask, pythonanywhere】10分でwebサイト公開（無料サーバー・広告なし・無料SSL）](https://qiita.com/probabilityhill/items/678f77dc96ccad47c401)
     - [A beginner's guide to building a simple database-backed Flask website on PythonAnywhere](https://blog.pythonanywhere.com/121/)
+    - [Using an SSH Tunnel to With Flask-SQLAlchemy for Python Anywhere MySQL Database](https://www.youtube.com/watch?v=UXsb4IFkSfc&t=626s)
     - [【Pythonanywhere】環境変数の設定（SECRET_KEYなど）](https://qiita.com/probabilityhill/items/f6be8ef9c60940466eef)
 3. 実装
     - [画像の表示](https://qiita.com/dem_kk/items/96117a7275c3267d0fbe)
