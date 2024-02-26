@@ -2,15 +2,28 @@
 <html lang=”ja”>
 <head>
 <meta charset=”UTF-8″>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
 </head>
 <body>
     <title>旅行ガチャ</title>
 
     <div style="text-align: center">
-        <span><font color="blue" style="align-content: center;"><h2>候補がないよ！</h2><font></span>
-        <div style="padding: 48px;">
+        <div style="background-color: #3976A7; height: 64px; line-height: 64px; font-size: 32px; font-weight: bold;color:#FFC007;">
+            Python + Flask
+        </div>
+        <div style="font-size: 36px; padding: 36px;">
+            候補がないよ!
+        </div>
+        <div style="padding: 36px;">
             <!-- 画像 -->
-            <img src="images/globe.gif">
+            <img
+                src="images/globe.gif"
+                style="width: 480px;">
         </div>
         <div style="padding: 16px;"/>
         <form>
@@ -18,7 +31,7 @@
                 formaction="/retry"
                 formmethod="GET"
                 type="submit"
-                style="width: 50%; height: 64px; font-size: xx-large; border-radius: 24px;">
+                style="width: 40%; height: 64px; font-size: xx-large; border-radius: 24px;">
                 候補を入れる
             </button>
         </form>
