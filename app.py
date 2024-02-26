@@ -2,21 +2,25 @@ import sys
 
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 import random
+from dotenv import load_dotenv
+import os
+
+# .envから環境変数を読み込む
+load_dotenv()
 
 # 画像読み込み
 app = Flask(__name__, static_folder='./templates/images')
 
 # DB設定
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{user}:{password}@{host}/{db-name}?charset=utf8'.format(**{
-      'user': 'admin',
-      'password': 'mysqlroot',
-      'host': 'localhost',
-      'db-name': 'travel_gacha'
+app.config['SQLALCHEMY_DATABASE_URI'] = '{db-connection}://{user}:{password}@{host}/{db-name}?charset=utf8'.format(**{
+      'db-connection': os.getenv('DB_CONNECTION'),
+      'user': os.getenv('DB_USER'),
+      'password': os.getenv('DB_PASSWORD'),
+      'host': os.getenv('DB_HOST'),
+      'db-name': os.getenv('DB_NAME')
   })
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
 
 # モデル定義
 class TravelGacha(db.Model):
